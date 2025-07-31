@@ -1,0 +1,150 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
+
+body {
+  margin: 0;
+  font-family: 'Pretendard';
+  background-color: rgba(0,0,0,0.75);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+
+  gap: 12px;
+}
+
+.quickBox {
+  width: 65%;
+  max-width: 720px;
+  height: 50px;
+
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.25);
+  border: solid 1px rgba(0,0,0,0.25);
+  border-radius: 5px;
+  padding: 8px 12px;
+
+  display: flex;
+  align-items: center;
+  color: #212121;
+  background-color: #fafafa;
+
+  margin-top: 10%;
+  gap: 12px;
+}
+
+.quickBox .iconContainer .icon {
+  font-size: 18pt;
+  color: rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.quickBox > .input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: inherit;
+
+  font-size: 16pt;
+  font-weight: 700;
+}
+
+.quickBox > .input:focus {
+  outline: none;
+}
+
+.iconContainer {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchTip {
+  width: 65%;
+  max-width: 720px;
+  color: rgba(250,250,250,0.75);
+}
+
+.searchResult {
+  width: 65%;
+  max-width: 720px;
+  height: 50px;
+
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  padding: 8px 12px;
+
+  display: flex;
+  align-items: center;
+  color: #212121;
+  background-color: #fafafa;
+
+  transition: background 0.2s ease-in-out;
+
+  gap: 12px;
+  cursor: pointer;
+}
+
+.searchResult:hover {
+  background-color: #d0f4de;
+}
+
+.searchResultActive {
+  background-color: #d0f4de;
+}
+
+.searchResultActive::after {
+  content: 'ENTER';
+  font-size: 10pt;
+  margin-left: auto;
+
+  padding: 2px 5px;
+  border-radius: 2px;
+  background-color: rgba(0,0,0,0.25);
+  color: #fafafa;
+
+  font-weight: 700;
+}
+
+.searchResult > .icon {
+  font-size: 18pt;
+  color: rgba(0,0,0,0.5);
+}
+
+.searchResult .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.searchResult .container .subtitle {
+  font-size: 10pt;
+  font-weight: 600;
+  color: rgba(0,0,0,0.65);
+}
+
+.searchResult .container .title {
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.searchResultDisabled {
+  background-color: rgba(250,250,250,0.5);
+  cursor: not-allowed;
+}
+
+.searchResultDisabled:hover {
+  background-color: rgba(250,250,250,0.5);
+}
+
+.searchResultDisabled .icon {
+  opacity: 0.5;
+}
+
+.searchResultDisabled .container .title {
+  color: rgba(0,0,0,0.5);
+}

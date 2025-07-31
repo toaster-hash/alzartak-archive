@@ -1,0 +1,807 @@
+body {
+  background-color: #212121 !important;
+  color: #fafafa;
+}
+
+.border_sub {
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+tr, tbody, table, td, th {
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+th {
+  color: rgba(250,250,250, 0.5) !important;
+}
+
+#cafe-menu .cafe-menu-list .total {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+iframe {
+  transition: opacity 0.1s ease-in-out;
+}
+
+.alzartak-iframe-loading {
+  display: block !important;
+  opacity: 0 !important;
+}
+
+#cafe-body-skin {
+  background-color: #212121 !important;
+}
+
+#main-area {
+  background-color: transparent !important;
+}
+
+.cafe-search {
+  background: transparent;
+}
+
+.gnb_icon {
+  opacity: 0.5;
+}
+
+.cafe-search .inp {
+  border-color: rgba(250,250,250,0.1);
+  background-color: rgba(250,250,250,0.1);
+  color: #fafafa;
+}
+
+.info-action-tab,
+.area_info_box,
+.ia-info-data2,
+#ia-info-data-emblem {
+  border-top-color: rgba(250,250,250,0.05) !important;
+  border-bottom-color: rgba(250,250,250,0.05) !important;
+}
+
+#cafe-info-action {
+  background-color: #212121 !important;
+}
+
+#cafe-info-action .info-action-tab, #cafe-info-action .box-g, #cafe-info-action #ia-info-data-emblem {
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+#cafe-info-action #ia-info-data-emblem {
+  padding-bottom: 12px !important;
+}
+
+.info-action-tab .gm-tcol-t {
+  color: rgba(250,250,250,0.8) !important;
+}
+
+#ia-info-data-emblem .txt {
+  color: rgba(250,250,250,0.8) !important;
+}
+
+.ia-info-data .ico-manager {
+  color: rgba(250,250,250,0.8) !important;
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+.ia-info-data .gm-tcol-c .id .ellipsis {
+  color: #fafafa !important;
+}
+
+.ia-info-data .gm-tcol-c {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.ia-info-data3 {
+  border-top: solid 1px rgba(250,250,250,0.1) !important;
+}
+
+.ia-info-data3 li {
+  color: rgba(250,250,250,0.8) !important;
+}
+
+.ia-info-data3 em {
+  color: rgba(250,250,250,1) !important;
+}
+
+.ia-info-btn .link_chat {
+  background-color: rgba(250,250,250,0.1) !important;
+  color: rgba(250,250,250,0.5) !important;
+  border-color: transparent !important;
+}
+
+#cafe-menu {
+  padding-top: 2px !important;
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+#cafe-menu .cafe-menu-list li a {
+  color: rgba(250,250,250,0.75) !important;
+  transition: color 0.2s ease-in-out;
+}
+
+#cafe-menu .cafe-menu-list li a:hover {
+  color: #fafafa !important;
+}
+
+#cafe-menu .cafe-menu-tit {
+  border-top-color: rgba(250,250,250,0.1) !important;
+  border-bottom-color: rgba(250,250,250,0.1) !important;
+}
+
+#cafe-menu .cafe-menu-tit * {
+  color: #fafafa !important;
+}
+
+#cafe-menu .cafe-menu-space {
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+.com .box-w {
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+.com .box-w .group-tit {
+  color: #fafafa !important;
+}
+
+.com .box-w .group-tit img {
+  opacity: 0.2 !important;
+}
+
+.com .box-w .group-mlist .tcol-c {
+  color: rgba(250,250,250,0.2) !important;
+}
+
+.com .box-w .group-list .tcol-c {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+#linked-member #lm-list {
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+.com .box-ww {
+  background-color: rgba(250,250,250,0.1) !important;  
+}
+
+#widget-count {
+  border-color: transparent !important;
+}
+
+.cafe-write-btn {
+  margin-top: 3px;
+}
+
+.cafe-write-btn a {
+  background-color: #03c75a !important;
+  margin-bottom: 2px !important;
+}
+
+.border-sub {
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+#main-area .m-tcol-c {
+  color: rgba(250,250,250,0.75) !important;
+}
+
+#main-area .m-tcol-c .date,
+#main-area .m-tcol-c .num {
+  color: rgba(250,250,250,0.25) !important;
+}
+
+#main-area .list-tit {
+  color: rgba(250,250,250,0.95) !important;
+}
+
+#main-area .sub-tit-color, .BoardHeaderTitle .title_area .sub-tit-color {
+  color: rgba(250,250,250,0.75) !important;
+}
+
+.check_box label {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.check_box label::before {
+  opacity: 0.5 !important;
+}
+
+.search_result .search_input {
+  background-color: rgba(250,250,250, 0.1) !important;
+}
+
+.search_result .learn_more.is_selected + .search_input {
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+.input_component, .input_component input {
+  border-color: transparent !important;
+  background-color: rgba(250,250,250,0.1) !important;
+  color: rgba(250,250,250,1) !important;
+}
+
+.input_component input {
+  background-color: transparent !important;
+}
+
+.select_component .date_enter {
+  background-color: rgba(250,250,250,0.1) !important;
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+.select_component .date_enter input {
+  background-color: rgba(250,250,250, 0.1) !important;
+  color: rgba(250,250,250,1) !important;
+  border-color: transparent !important;
+}
+
+.select_component .date_enter .tit {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.select_component .date_enter .btn_set {
+  background-color: rgba(250,250,250,0.1) !important;
+  border-color: transparent !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.select_component .date_enter .btn_set:hover {
+  background-color: rgba(250,250,250,0.25) !important;
+}
+
+.input_search_area .input_component, .input_search_area .input_component input {
+  border-color: rgba(250,250,250,0.1) !important;
+  background-color: rgba(250,250,250,0.1) !important;
+  color: #fafafa !important;
+}
+
+.select_component3 {
+  border: solid 1px transparent !important;
+}
+
+.select_component2, .select_component {
+  border: solid 1px transparent !important;
+  background-color: rgba(250,250,250,0.2) !important;
+}
+
+.select_component3 .select_box, .select_component2 .select_box, .select_component .select_box {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.select_component3 .select_list, .select_component2 .select_list, .select_component .select_list {
+  border: solid 1px rgba(250,250,250,0.2) !important;
+  background-color: #212121 !important;
+}
+
+.select_component3 .select_list li a, .select_component2 .select_list li a, .select_component .select_list li a {
+  color: #fafafa !important;
+}
+
+.select_component3 .select_list li a:hover, .select_component2 .select_list li a:hover, .select_component .select_list li a:hover {
+  color:#03c75a !important;
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+.board-notice.type_required {
+  background-color: rgba(255, 78, 90, 0.2) !important;
+}
+
+.board-notice.type_main {
+  background-color: rgba(255, 78, 90, 0.05) !important;
+}
+
+.board-notice.type_menu {
+  background: transparent !important;
+}
+
+.board-notice.type_main .article, .board-notice.type_required .article, .board-notice.type_menu .article {
+  color: #ff4e59 !important;
+}
+
+.board-notice.type_up .article, .article-board .article {
+  color: rgba(250,250,250,0.75) !important;
+}
+
+.article-board .td_date,
+.article-board .td_view,
+.article-board .td_likes {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.prev-next {
+  margin-top: 0px !important;
+  background-color: transparent !important;
+}
+
+.prev-next a {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.prev-next .on {
+  border-color: transparent !important;
+  background-color: rgba(250,250,250,0.05) !important;
+  color: #03c75a !important;
+}
+
+.article-album-sub .tit {
+  color: rgba(250,250,250,0.75) !important;
+}
+
+.article-album-sub {
+  margin-bottom: 1px !important;
+} 
+
+.list-search {
+  background-color: transparent !important;
+  border-top-color: rgba(250,250,250,0.1) !important;
+}
+
+#special-menu {
+  border-color: transparent !important;
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+.link_special {
+  color: rgba(250,250,250,0.65) !important;
+}
+
+#widget_company_info .tit_company {
+  color: rgba(250,250,250,0.75) !important;
+}
+
+#widget_company_info .link_company {
+  border-color: rgba(250,250,250,0.1) !important;
+  background-color: rgba(250,250,250,0.1) !important;
+  color: rgba(250,250,250,0.5) !important;
+}
+
+#widget_company_info .list_company li {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+/**
+  게시글
+*/
+.layout_content {
+  background-color: transparent !important;
+}
+
+.ArticleContentBox {
+  border-color: transparent !important;
+  background-color: rgba(250,250,250,0.1) !important;
+  border-radius: 0px !important;
+}
+
+.ArticleContentBox .article_header {
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+.WriterInfo .profile_info .link_talk {
+  color: rgba(250,250,250,0.5) !important;
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+.WriterInfo .profile_info .link_talk:hover {
+  color: rgba(250,250,250,1) !important;
+  background-color: rgba(250,250,250,0.2) !important;
+}
+
+.WriterInfo .profile_info .nick_level {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.ReplyBox .social_article .text_area .social_text .svg-icon {
+  color: rgba(250,250,250,0.2) !important;
+}
+
+.ArticleTool .toast_url_copy_successful {
+  background-color: rgba(10,10,10,0.95) !important;
+  color: #fafafa !important;
+}
+
+.BaseButton {
+  background-color: rgba(250,250,250,0.1) !important;
+  color: rgba(250,250,250,0.5) !important;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.BaseButton .svg-icon, .button_comment .svg-icon {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.BaseButton:hover {
+  background-color: rgba(250,250,250,0.2) !important;
+  color: rgba(250,250,250,1) !important;
+}
+
+.CommentBox, .CommentBox .comment_list .CommentItem {
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+.CommentWriter {
+  border-radius: 0px !important;
+  background-color: rgba(250,250,250,0.1) !important;
+  border-color: transparent !important;
+}
+
+.CommentWriter .comment_inbox_text {
+  color: rgba(250,250,250,0.95) !important;
+}
+
+.CommentWriter .comment_attach .svg-icon {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.ContentRenderer a {
+  color: #1890ff !important;
+}
+
+.CommentBox .comment_option .comment_tab .comment_tab_item .comment_tab_button[aria-selected=true] {
+  color: #03c75a !important;
+}
+
+.ArticlePaginate .btn.number[aria-pressed=true] {
+  color: #03c75a !important;
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+.ArticlePaginate .btn.number {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.alarm_txt {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.toggle_switch {
+  opacity: 0.5 !important;
+}
+
+.btn_type1 {
+  border-color: transparent !important;
+  background-color: rgba(250,250,250,0.1) !important;
+  color: rgba(250,250,250,0.5) !important;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.btn_type1:hover {
+  background-color: rgba(250,250,250,0.2) !important;
+  color: rgba(250,250,250,1) !important;
+}
+
+.btn_type1 .svg-icon {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.PopularArticles .PopularCafeList .popular_list .link {
+  color: rgba(250,250,250,1) !important;
+}
+
+.PopularArticles .PopularCafeList .popular_list .list_item {
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+.RelatedArticlesTabContainer__tab button[aria-pressed=true] {
+  color: rgba(250,250,250,1) !important;
+}
+
+.RelatedArticlesTabContainer__tab button[aria-pressed=true]:after {
+  background-color: rgba(250,250,250,1) !important;
+}
+
+.RelatedArticles .list_item.selected {
+  background-color: rgba(3,199,90,0.1) !important;
+}
+
+.SubscribeButton .subscribe_text {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.SubscribeButton .ToggleSwitch {
+  opacity: 0.5 !important;
+}
+
+.RelatedArticlesTabContainer__tab .tab_menu, .RelatedArticles .list_item {
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+#naver-gnb #gnb-menu .gnb_name {
+  color: rgba(250,250,250,0.8) !important;
+}
+
+#naver-gnb a {
+  color: rgba(250,250,250,0.5);
+  transition: color 200ms;
+}
+
+#cafe-info-action .box-g a:hover {
+  color: rgba(250,250,250,0.95);
+}
+
+#cafe-info-action .box-g a {
+  color: rgba(250,250,250,0.5);
+  transition: color 200ms;
+}
+
+a.tit {
+  color: rgba(250,250,250,0.95);
+}
+
+/**
+* 파워링크 광고
+*/
+.power_ad, .AdvertArea, .wrap_post_adpost {
+  background-color: rgba(250,250,250,0.95) !important;
+}
+
+.sub_tit_profile .nick_area .nick_btn, .sub_tit_profile .info_area .level, .sub_tit_profile .info_area .num {
+  color: rgba(250,250,250,1) !important;
+}
+
+.list-style .link_sort {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.article_profile .list-style .link_sort.on {
+  color: #03c75a !important;
+}
+
+.article_profile .sort_area .btn_subscript {
+  background-color: rgba(250,250,250,0.1) !important;
+  color: #fafafa !important;
+
+  transition: background-color 0.2s ease-in-out;
+}
+
+.ArticlePaginate .btn {
+  border-color: transparent !important;
+}
+
+.CommentBox .comment_list .CommentItem.CommentItem--mine {
+  background-color: transparent !important;
+}
+
+.CommentBox .comment_list .CommentItem.CommentItem--mine:before {
+  background-color: rgba(3,199,90,0.1) !important;
+}
+
+.ModalLayer .layer_footer .BaseButton--gray {
+  background: rgba(10,10,10,0.5) !important;
+  color: #fafafa !important;
+}
+
+.ModalLayer .layer_footer .BaseButton--gray:hover {
+  background: rgba(10,10,10,0.8) !important;
+}
+
+.BaseButton--green {
+  background: rgba(3,199,90,.12) !important;
+  color: #009f47 !important;
+}
+
+.BaseButton--green:hover {
+  background: rgba(3,199,90,.24) !important;
+  color: #009f47 !important;
+}
+
+.box_write .tf_write {
+  background-color: #424242 !important;
+  color: #fafafa !important;
+}
+
+.box_write .set_attach {
+  background-color: #424242 !important;
+}
+
+.box_write .set_attach .btn_submit {
+  background-color: #212121 !important;
+}
+
+.box_write fieldset *, .article-memo .memo_lst_section .tit-box, .box_write {
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+#member-action-data {
+  color: rgba(250,250,250,0.3) !important;
+}
+
+#member-action-data .prfl_info {
+  color: #fafafa !important;
+}
+
+#member-action-data .grade {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.article-album .album-box li .price {
+  color: #fafafa !important;
+}
+
+/**
+ * 카페 글쓰기
+*/
+
+.WritingEditor .editer_wrap {
+  border: none !important;
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+.WritingHeader .title {
+  color: rgba(250,250,250,1) !important;
+}
+
+.WritingHeader .tool_area .temp_save_area {
+  background-color: rgba(250,250,250,0.1) !important;
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.WritingHeader .tool_area .temp_save_area .btn_temp_save, .WritingHeader .tool_area .temp_save_area .btn_temp_count {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.WritingHeader .tool_area .temp_save_area .btn_temp_count:before {
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+.ModalLayer {
+  color: rgba(250,250,250,1) !important;
+}
+
+.ModalLayer .layer_wrap {
+  background-color: rgba(10,10,10,0.98) !important;
+  box-shadow: 0 2px 28px 0px rgb(250 250 250 / 10%) !important;
+}
+
+.ModalLayer .layer_temporary_content .temp_item {
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+.ModalLayer .layer_temporary_content .temp_link .temp_item_title {
+  color: rgba(250,250,250,0.8) !important;
+}
+
+.WritingSide {
+  color: rgba(250,250,250,0.8) !important;
+}
+
+.WritingSide .setting_area {
+  background-color: #424242 !important;
+}
+
+.WritingSide .open_select, .WritingSide .open_set .btn_open_set {
+  color: rgba(250,250,250,0.8) !important;
+}
+
+.FormSelectButton .button {
+  border-color: transparent !important;
+  background-color: rgba(250,250,250,0.1) !important;
+  color: rgba(250,250,250,0.85) !important;
+}
+
+.FormSelectButton .button .svg-icon {
+  color: rgba(250,250,250,0.5) !important;
+}
+
+.FormSelectButton .button[disabled] {
+  opacity: 0.5 !important;
+}
+
+.FlexableTextArea .textarea_input {
+  border-color: transparent !important;
+  background-color: rgba(250,250,250,0.1) !important;
+  color: rgba(250,250,250,1) !important;
+}
+
+.se-body .se-wrap {
+  background: transparent !important;
+}
+
+/**
+카페 정보란
+ */
+.skin-1080 .article-intro .tbl_cafe_info th, .skin-1080#main-area .bg-color {
+  background-color: transparent !important;
+}
+
+.tab_list_wrap {
+  background-color: rgba(250,250,250,0.1) !important;
+  border-color: transparent !important;
+}
+
+.tab_list_wrap li {
+  border: none !important;
+  background-color: rgba(250,250,250,0.05) !important;
+  margin-right: initial !important;
+}
+
+.tab_list_wrap li {
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+.tab_list_wrap li.selected {
+  background-color: rgba(250,250,250,0.2) !important;
+}
+
+.CafeRanking .article-intro .article-board {
+  border-top-color: rgba(250,250,250,0.1) !important;
+}
+
+.CafeRanking .article-intro .group_rank .rank_head,
+.CafeRanking .article-intro .group_rank {
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+.CafeRanking .article-intro .group-tit {
+  border-bottom: none !important;
+  margin-bottom: 2px !important;
+}
+
+.CafeRanking .article-intro .group_rank .rank_head,
+.CafeRanking .article-intro .article-board th {
+  background-color: rgba(250,250,250,0.1) !important;
+}
+
+.CafeRanking .article-intro .group_rank .graph_list {
+  background-color: rgba(250,250,250,0.1) !important;
+  color: #fafafa !important;
+}
+
+.CafeRanking .article-intro .group_rank .graph_list .link {
+  color: rgba(250,250,250,0.5) !important;
+  transition: color 200ms;
+}
+
+.CafeRanking .article-intro .group_rank .graph_list .link:hover {
+  color: rgba(250,250,250,0.75) !important;
+}
+
+/**
+카페연혁
+ */
+
+.CafeHistory .history_wrap {
+  border-radius: 0px !important;
+  border-color: rgba(250,250,250,0.1) !important;
+}
+
+.CafeHistory {
+  color: rgba(250,250,250,0.25) !important;
+}
+
+.CafeHistory .history_wrap .list .txt {
+  color: rgba(250,250,250,0.95) !important;
+}
+
+.CafeHistory .history_wrap .list .go_to {
+  color: rgba(250,250,250,0.5) !important;
+  transition: color 200ms;
+}
+
+.CafeHistory .history_wrap .list .go_to:hover {
+  color: rgba(250,250,250,0.75) !important;
+}
+
+/**
+인기글
+*/
+.TabButton .tab_btn {
+  border: solid 1px rgba(250,250,250,0.15);
+  color: rgba(250,250,250,0.5);
+  transition: all 0.1s;
+}
+
+.TabButton .tab_btn:hover {
+  background-color: rgba(0, 159, 71, 0.1);
+  border-color: transparent;
+}
+
+.BoardBottomOption .paginate_area {
+  background: transparent !important;
+}
+
+.BoardBottomOption .btn_link {
+  border-color: rgba(250,250,250,0.2);
+  background-color: rgba(250,250,250,0.85);
+}

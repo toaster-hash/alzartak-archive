@@ -1,0 +1,80 @@
+.alzartak-active-menu {
+  background-color: rgba(3,199,90,0.1) !important;
+  margin-top: 0px !important;
+  padding-top: 6px !important;
+}
+
+.alzartak-color-transition {
+  transition: all 0.2s ease-in-out;
+  transition-property: background-color, color;
+}
+
+.alzartak-top-button-container {
+  width: max-content;
+  display: flex;
+  flex-direction: row-reverse;
+
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+}
+
+#alzartak-top-button {
+  margin-right: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+
+  background-color: rgba(66,66,66,0.95);
+  transition: all 0.2s ease-in-out;
+
+  font-size: 20px;
+
+  width: 40px;
+  height: 40px;
+}
+
+#alzartak-top-button * {
+  color: #fafafa;
+}
+
+#alzartak-top-button:hover {
+  background-color: rgba(3,199,90,0.85);
+}
+
+.alzartak-write-favorite-board {
+  background-color: rgba(3,199,90,0.15);
+}
+
+.alzartak-write-favorite-board > button {
+  display: flex !important;
+}
+
+.alzartak-write-favorite-board > button .right-note {
+  margin-left: auto;
+  color: rgba(10,10,10,0.5);
+}
+
+.alzartak-write-favorite-board .option:hover {
+  background-color: rgba(3,199,90,0.3) !important;
+}
+
+.alzartak-viewed-article td,
+.alzartak-viewed-article .con,
+.alzartak-viewed-article .movie-img,
+.alzartak-viewed-article > dl > dt,
+.alzartak-viewed-article > a.album-img {
+  opacity: 0.55;
+}
+
+.se-section-oglink.alzartak-viewed-article {
+  opacity: 0.55;
+}
+
+/* 글쓰기 Header 위치 수정 */
+.WritingWrap.scroll_fixed .WritingHeader {
+  min-height: 45px;
+}

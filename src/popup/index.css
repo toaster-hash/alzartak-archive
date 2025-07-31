@@ -1,0 +1,160 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css');
+
+body {
+  margin: 0;
+  font-family: 'Pretendard';
+  max-width: 800px;
+  width: max-content;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 5px;
+  gap: 5px;
+}
+
+.app .logo-area {
+  flex: 1;
+  height: auto;
+
+  padding: 5px;
+  background-color: #212121;
+  color: #fafafa;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.app .logo-area > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.app .logo-area .right {
+  margin-left: auto;
+}
+
+.app .logo-area .right > * {
+  margin-left: auto;
+}
+
+.app .logo-area > img {
+  width: 30px;
+  height: 30px;
+}
+
+.app .logo-area .title {
+  font-size: 12pt;
+  font-weight: 700;
+}
+
+.app .logo-area .version {
+  font-size: 8pt;
+  font-weight: 300;
+  color: rgba(250,250,250,0.5);
+}
+
+.app label {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.app .author-container {
+  display: flex;
+  padding: 5px;
+
+  gap: 5px;
+
+  flex-direction: column;
+
+  border-top: solid 1px rgba(10,10,10,0.1);
+}
+
+.app .author {
+  margin-left: auto;
+  font-size: 8pt;
+  font-weight: 500;
+  color: rgba(10,10,10,0.75);
+
+  text-align: end;
+}
+
+.app .release-note {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+
+  background-color: rgba(3,199,90,0.25);
+
+  position: relative;
+}
+
+.app .release-note .title {
+  font-size: 10pt;
+  font-weight: 700;
+}
+
+.app .release-note .description {
+  font-weight: 500;
+}
+
+.app .release-note #release-note-close {
+  color: rgba(10,10,10,0.5);
+  transition: color 0.2s ease-in-out;
+
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  font-size: 15px;
+}
+
+.app .release-note #release-note-close:hover {
+  color: rgba(10,10,10,1);
+}
+
+.app .note {
+  color: rgba(10,10,10,0.5);
+  font-size: 8pt;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.app .flex {
+  display: flex;
+  gap: 5px;
+}
+
+.app .not-detected-container {
+  width: 100%;
+  padding: 5px;
+
+  background-color: rgba(250,0,0,0.1);
+  color: #212121;
+
+  font-weight: 500;
+}
+
+.app .not-detected-container .title {
+  font-weight: 700;
+}
+
+.app .new-badge {
+  padding: 3px 5px;
+  background-color: rgba(255,0,0,0.8);
+  color: #fafafa;
+
+  border-radius: 3px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+

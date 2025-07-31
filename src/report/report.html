@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신고하기</title>
+
+    <style>
+      body.loading * {
+        visibility: hidden;
+      }
+
+      body.loading:before {
+        visibility: visible;
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+      }
+
+      body {
+        margin: 0;
+
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      * {
+        font-family: "Pretendard Variable", Pretendard, sans-serif;
+        box-sizing: border-box;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      header {
+        display: flex;
+        padding: 16px 20px;
+      }
+
+      main {
+        height: 100%;
+        overflow-y: auto;
+      }
+
+      footer {
+        margin-top: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .warning-container {
+        display: flex;
+        flex-direction: column;
+        padding: 12px 20px;
+
+        background: #f6f6f6;
+      }
+
+      .warning-content {
+        color: #787878;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: -0.14px;
+
+        margin-left: 32px;
+      }
+
+      .info-container {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .info-content {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+
+      .info-label {
+        width: 72px;
+      }
+
+      .author-container {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+      }
+
+      .profile-badge {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: -0.14px;
+
+        background: #787878;
+      }
+
+      .profile-badge-1 {
+        background: #b686f1;
+      }
+      .profile-badge-2 {
+        background: #77a9fc;
+      }
+      .profile-badge-3 {
+        background: #88c86a;
+      }
+      .profile-badge-4 {
+        background: #88c86a;
+      }
+      .profile-badge-V {
+        background: #d2b247;
+      }
+
+      .content-label {
+        width: 100%;
+        flex: 1;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .divider {
+        width: 100%;
+        height: 4px;
+
+        background: rgba(204, 204, 204, 0.5);
+
+        margin-bottom: 8px;
+      }
+
+      .reason-container {
+        display: flex;
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .reason-button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        padding: 8px 16px;
+
+        display: flex;
+        gap: 12px;
+      }
+
+      .reason-button-icon {
+        width: 24px;
+        height: 24px;
+
+        border-radius: 9999px;
+        border: 2px solid rgba(204, 204, 204, 0.5);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .reason-button-icon-svg {
+        display: none;
+      }
+
+      .reason-button-selected .reason-button-icon {
+        background-color: #03c75a;
+        border: 2px solid #03c75a;
+      }
+
+      .reason-button-selected .reason-button-icon-svg {
+        display: block;
+      }
+
+      .reason-input {
+        border: none;
+        outline: none;
+        resize: none;
+
+        display: flex;
+        height: 56px;
+        padding: 16px 24px;
+        border-radius: 8px;
+        background: #f6f6f6;
+      }
+
+      .result-content {
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .result-icon {
+        margin-bottom: 16px;
+      }
+
+      .result-icon svg {
+        display: none;
+      }
+
+      .result-icon-enabled {
+        display: block !important;
+      }
+
+      .fotter-button {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 8px;
+
+        background-color: #03c75a;
+        border: none;
+
+        padding: 12px 0;
+
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 32px; /* 160% */
+        letter-spacing: -0.4px;
+
+        cursor: pointer;
+      }
+
+      .fotter-button:hover {
+        background-color: #03b351;
+      }
+
+      .fotter-button-disabled {
+        background-color: #029f48;
+        cursor: not-allowed;
+      }
+
+      .flex-row {
+        display: flex;
+        align-items: center;
+        align-items: center;
+      }
+
+      .text-header {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 24px */
+        letter-spacing: -0.4px;
+      }
+
+      .text-black {
+        color: #212121;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.16px;
+      }
+
+      .text-gray {
+        color: #787878;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: -0.16px;
+      }
+
+      .text-black-big {
+        color: #000;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 120%; /* 26.4px */
+        letter-spacing: -0.44px;
+
+        margin-bottom: 7px;
+      }
+
+      .text-center {
+        text-align: center;
+        white-space: pre-line;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+    </style>
+
+    <script src="report.js"></script>
+    <script src="js-sha256.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <p class="text-header">왁물원 <span id="type-text"></span> 신고하기</p>
+    </header>
+
+    <main id="main-container">
+      <div class="warning-container">
+        <div class="flex-row" style="gap: 8px">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M11 15H13V17H11V15ZM11 7H13V13H11V7ZM12 2C6.47 2 2 6.5 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C9.87827 20 7.84344 19.1571 6.34315 17.6569C4.84285 16.1566 4 14.1217 4 12C4 9.87827 4.84285 7.84344 6.34315 6.34315C7.84344 4.84285 9.87827 4 12 4C14.1217 4 16.1566 4.84285 17.6569 6.34315C19.1571 7.84344 20 9.87827 20 12C20 14.1217 19.1571 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z"
+              fill="#212121"
+            />
+          </svg>
+          <span class="text-black">꼭 확인해주세요!</span>
+        </div>
+
+        <div class="warning-content">
+          <p>• 허위 신고 시 신고자에게 제재가 갈 수 있습니다.</p>
+          <p>• 모든 신고 사항이 무조건 처리되지 않습니다.</p>
+          <p>• 신고 시 신고자의 왁물원 ID가 전송됩니다.</p>
+        </div>
+      </div>
+
+      <div class="info-container">
+        <div class="info-content">
+          <span class="text-gray info-label">작성자</span>
+          <div class="author-container" id="author-container"></div>
+        </div>
+
+        <div class="info-content">
+          <span class="text-gray info-label" id="content-type-label"></span>
+          <span class="text-black content-label" id="content-text"></span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="reason-container">
+        <p class="text-gray">사유 선택</p>
+        <div id="reason-buttons-container"></div>
+      </div>
+
+      <div class="reason-container">
+        <p class="text-gray">사유 입력</p>
+        <textarea
+          class="reason-input text-black"
+          placeholder="신고 사유를 입력해주세요. (최소 10자 이상)"
+        ></textarea>
+      </div>
+    </main>
+
+    <main id="result-container" class="hidden">
+      <div class="result-content">
+        <div class="result-icon">
+          <svg
+            id="result-complete"
+            width="96"
+            height="96"
+            viewBox="0 0 96 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M48 88C42.4667 88 37.2667 86.9493 32.4 84.848C27.5333 82.7467 23.3 79.8973 19.7 76.3C16.1 72.7027 13.2507 68.4693 11.152 63.6C9.05334 58.7307 8.00267 53.5307 8.00001 48C7.99734 42.4693 9.04801 37.2693 11.152 32.4C13.256 27.5307 16.1053 23.2973 19.7 19.7C23.2947 16.1027 27.528 13.2533 32.4 11.152C37.272 9.05067 42.472 8 48 8C53.528 8 58.728 9.05067 63.6 11.152C68.472 13.2533 72.7053 16.1027 76.3 19.7C79.8947 23.2973 82.7453 27.5307 84.852 32.4C86.9587 37.2693 88.008 42.4693 88 48C87.992 53.5307 86.9413 58.7307 84.848 63.6C82.7547 68.4693 79.9053 72.7027 76.3 76.3C72.6947 79.8973 68.4613 82.748 63.6 84.852C58.7387 86.956 53.5387 88.0053 48 88Z"
+              fill="#03C75A"
+            />
+            <path
+              d="M41.7697 54.4303L42.3 54.9607L42.8303 54.4303L62.6303 34.6303C63.2093 34.0514 63.9453 33.75 64.9 33.75C65.8547 33.75 66.5907 34.0514 67.1697 34.6303C67.7486 35.2093 68.05 35.9453 68.05 36.9C68.05 37.8547 67.7486 38.5907 67.1697 39.1697L44.5697 61.7697C43.9009 62.4385 43.1548 62.75 42.3 62.75C41.4453 62.75 40.6991 62.4385 40.0303 61.7697L28.6303 50.3697C28.0514 49.7907 27.75 49.0547 27.75 48.1C27.75 47.1453 28.0514 46.4093 28.6303 45.8303C29.2093 45.2514 29.9453 44.95 30.9 44.95C31.8547 44.95 32.5907 45.2514 33.1697 45.8303L41.7697 54.4303Z"
+              fill="white"
+              stroke="#03C75A"
+              stroke-width="1.5"
+            />
+          </svg>
+
+          <svg
+            id="result-error"
+            width="96"
+            height="96"
+            viewBox="0 0 96 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M48 88C42.4667 88 37.2667 86.9493 32.4 84.848C27.5333 82.7467 23.3 79.8973 19.7 76.3C16.1 72.7027 13.2507 68.4693 11.152 63.6C9.05334 58.7307 8.00267 53.5307 8.00001 48C7.99734 42.4693 9.04801 37.2693 11.152 32.4C13.256 27.5307 16.1053 23.2973 19.7 19.7C23.2947 16.1027 27.528 13.2533 32.4 11.152C37.272 9.05067 42.472 8 48 8C53.528 8 58.728 9.05067 63.6 11.152C68.472 13.2533 72.7053 16.1027 76.3 19.7C79.8947 23.2973 82.7453 27.5307 84.852 32.4C86.9587 37.2693 88.008 42.4693 88 48C87.992 53.5307 86.9413 58.7307 84.848 63.6C82.7547 68.4693 79.9053 72.7027 76.3 76.3C72.6947 79.8973 68.4613 82.748 63.6 84.852C58.7387 86.956 53.5387 88.0053 48 88Z"
+              fill="#FAB325"
+            />
+            <path
+              d="M47.0829 30.4725C49.1653 30.1384 51.2931 31.4321 51.4876 33.6161C51.5489 34.3015 51.5076 35.2465 51.4796 35.9532C51.2785 41.1758 50.5363 46.4116 50.3778 51.6448C49.8169 54.4797 45.8451 54.5648 45.1363 51.7765C44.9804 46.0962 44.125 40.3892 44.0011 34.7155C43.9598 32.8082 45.0777 30.7946 47.0815 30.4725H47.0829Z"
+              fill="white"
+            />
+            <path
+              d="M47.7597 66.4202C49.748 66.4202 51.3597 64.8102 51.3597 62.8241C51.3597 60.838 49.748 59.2279 47.7597 59.2279C45.7715 59.2279 44.1597 60.838 44.1597 62.8241C44.1597 64.8102 45.7715 66.4202 47.7597 66.4202Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+
+        <span id="result-heading" class="text-black-big"></span>
+        <span id="result-text" class="text-gray text-center"></span>
+      </div>
+    </main>
+
+    <footer>
+      <button class="fotter-button">신고하기</button>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alzartak - cafe settings</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="./js/index.js"></script>
+</head>
+<body>
+  <div class="app">
+    <div class="logo-area">
+      <img src="./128.png" />
+      <div class="right">
+        <span class="title">네이버 카페 기능 설정</span>
+        <span id="version" class="version">알잘딱 버전 0.0.1</span>
+      </div>
+    </div>
+    <div id="relase-note" class="release-note">
+      <span class="title">🙌 알잘딱 v0.0.1 업데이트 완료 안내</span>
+      <span class="description">
+        <!-- Release note -->
+      </span>
+      <i id="release-note-close" class="fa-solid fa-xmark"></i>
+    </div>
+
+    <span class="note">* 변경된 설정값을 반영하는데 조금 시간이 소요될 수 있습니다.<br/>* 변경 후 잠시만 기다려 주세요!</span>
+    <label><input id="disable_report_button" class="option" type="checkbox"/>  <span class="new-badge">[NEW]</span> 신고버튼 비활성화</label>
+    <label><input id="wakscord_ui" class="option" type="checkbox"/> <span class="new-badge">[NEW]</span>왁스코드 대화형 보기</label>
+    <label><input id="wakscord_notification" class="option" type="checkbox"/> <span class="new-badge">[NEW]</span>왁스코드 채팅 알림</label>
+    <label><input id="cafe_quickmenu" class="option" type="checkbox"/>퀵메뉴 기능 활성화 (Ctrl / Alt / Option + Shfit + Q)</label>
+    <label><input id="dark_mode" class="option" type="checkbox"/> 다크모드 기능 활성화</label>
+    <label><input id="cafe_top_button" class="option" type="checkbox"/> TOP 버튼 활성화<br />- 스크롤을 최상단으로 바로 이동하는 버튼을 생성합니다.</label>
+    <div class="flex">
+      <label><input id="cafe_active_menu" class="option" type="checkbox"/> 게시판 하이라이트 기능 활성화</label>
+      <label><input id="cafe_keep_location" class="option" type="checkbox"/> 새로고침시 위치 기억</label>
+    </div>
+    <div class="flex">
+      <label><input id="cafe_comment_write_position" class="option" type="checkbox"/> 댓글 작성란 상단으로 이동</label>
+      <label><input id="cafe_comment_auto_reload" class="option" type="checkbox"/> 댓글 자동 새로고침</label>
+    </div>
+    <label><input id="cafe_pretendard" class="option" type="checkbox"/>고딕 폰트 변경 (Pretendard)</label>
+    <label><input id="cafe_viewed_article" class="option" type="checkbox"/>확인한 게시글은 글 목록에서 반투명 상태로 표시</label>
+    <label><input id="cafe_comment_newest" class="option" type="checkbox"/> 댓글 기본 정렬을 최신순으로 변경</label>
+    <label><input id="cafe_write_subtitle_protection" class="option" type="checkbox"/>글 작성 시 말머리 필수 설정 (실수 방지)<br />- 설정 가능한 말머리가 없는 경우 동작하지 않습니다</label>
+    <label><input id="cafe_img_download_btn_short" class="option" type="checkbox"/> 원본 이미지 다운로드 버튼 간소화<br />- 원본 이미지 PC 다운로드 버튼을 바로 표기하게 설정합니다</label>
+    <label><input id="write_favorite_board" class="option" type="checkbox"/> 글 쓰기시 즐겨찾기한 게시판 우선 표시</label>
+    <div class="author-container">
+      <span class="author">Made By 하두바, 2022-2025<br/>문의: <a href="mailto://hdd_bar@proton.me">hdd_bar@proton.me</a></span>
+      <a href="#" role="button" id="license" class="author">오픈소스 라이선스 확인 (Open Source License)</a>
+      <a href="#" role="button" id="showRelease" class="author">업데이트 내역 확인</a>
+    </div>
+  </div>
+</body>
+</html>

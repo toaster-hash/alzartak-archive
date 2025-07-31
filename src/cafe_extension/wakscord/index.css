@@ -1,0 +1,345 @@
+/* 왁스코드 기능 */
+#alzartak_wakscord_banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  gap: 5px;
+  
+  box-shadow: 0px 0px 2px rgba(3, 199, 90, 0.85);
+  font-size: 12pt;
+  font-family: 'Pretendard';
+}
+
+#alzartak_wakscord_banner img {
+  width: 20px;
+  height: 20px;
+}
+
+#wakscord_comment_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#wakscord_comment_container * {
+  font-family: "Pretendard","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic","돋움",dotum,sans-serif;
+}
+
+.wakscord_comment {
+  font-size: 15pt;
+
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 5px;
+
+  align-items: center;
+}
+
+.wakscord_comment-user {
+  flex-direction: row-reverse !important;
+}
+
+.wakscord_comment:first-child .avatar {
+  display: initial !important;
+}
+
+.wakscord_comment:first-child .comment {
+  margin-left: 0px !important;
+}
+
+.wakscord_comment .avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  display: none;
+}
+
+.wakscord_comment .avatar_everyone {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+}
+.wakscord_comment .avatar_everyone_normal {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  display: none;
+}
+
+.wakscord_comment .comment_everyone {
+  font-size: 14pt;
+  padding: 7px;
+  border-radius: 2px;
+  color: #000000;
+  background-color: #f4f4f4;
+  font-weight: 500;
+  margin-left: 0px;
+  animation: wakscord_comment 0.5s ease-in-out;
+  word-break: break-all;
+  max-width: 80%;
+}
+
+.wakscord_comment .gosegu {
+  background-color: #dbeeff !important;
+}
+.wakscord_comment .ine {
+  background-color: #f7eaff !important;
+}
+
+.wakscord_comment .jingburger {
+  background-color: #ffffd8 !important;
+}
+
+.wakscord_comment .lilpa {
+background-color: #eff1ff !important;
+}
+
+.wakscord_comment .jururu {
+  background-color: #ffebff !important;
+}
+
+.wakscord_comment .viichan {
+  background-color: #eeffea !important;
+}
+
+.wakscord_comment .wakgood {
+  background-color: #f4f4f4 !important;
+}
+
+
+.wakscord_comment .comment_everyone a {
+  color: #00A8FC;
+}
+
+.wakscord_comment .comment {
+  font-size: 14pt;
+  padding: 7px;
+  border-radius: 2px;
+  background-color: #F4F4F4;
+  color: #000000;
+  font-weight: 500;
+  margin-left: 40px;
+  animation: wakscord_comment 0.5s ease-in-out;
+  word-break: break-all;
+  max-width: 80%;
+}
+.wakscord_comment .comment_everyone_normal {
+  font-size: 14pt;
+  padding: 7px;
+  border-radius: 2px;
+  color: #000000;
+  background-color: #f4f4f4;
+  font-weight: 500;
+  margin-left: 40px;
+  animation: wakscord_comment 0.5s ease-in-out;
+  word-break: break-all;
+  max-width: 80%;
+}
+
+.wakscord_comment .comment_everyone_normal a {
+  color: #00A8FC;
+}
+
+.wakscord_comment_anime_disabled .comment {
+  animation: none !important;
+}
+
+.wakscord_comment_anime_disabled .comment_everyone {
+  animation: none !important;
+}
+
+.wakscord_comment_anime_disabled .comment_everyone_normal {
+  animation: none !important;
+}
+
+.wakscord_comment .comment a {
+  color: #00A8FC;
+}
+
+.wakscord_comment-user .comment {
+  margin-left: 0px !important;
+}
+
+.wakscord_danger_comment .comment {
+  background-color: #FFEDED !important;
+}
+
+.wakscord_comment .image {
+  width: auto;
+  max-height: 300px;
+}
+
+.wakscord_comment .time {
+  margin-top: auto;
+  font-size: 10pt;
+  color: #808080;
+}
+
+@keyframes wakscord_comment {
+  0% {
+    opacity: 0.2;
+    background-color: #ABF4C4;
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    background-color: inherit;
+  }
+}
+
+#wakscord-notification-container {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+
+  display: flex;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 99999999;
+
+  gap: 10px;
+}
+
+.wakscord-notification {
+  width: 400px;
+  min-height: 45px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 10px 5px;
+  border-radius: 5px;
+
+  font-family: 'Pretendard', inherit;
+  animation: wakscord-notification 0.2s ease-in-out;
+  background-color: #424242;
+  background-size: cover;
+
+  color: #fafafa;
+  cursor: pointer;
+
+  position: relative;
+  isolation: isolate;
+}
+
+.wakscord-notification::after {
+  content: '';
+  position: absolute;
+  background: black;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.8;
+}
+
+@keyframes wakscord-notification {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.wakscord--notification
+
+.wakscord-notification > dlv {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wakscord-notification .notification-title {
+  font-size: 12pt;
+  margin-bottom: 5px;
+}
+
+.wakscord-notification .notification-subtitle {
+  font-size: 10pt;
+  color: rgba(250,250,250,0.8);
+}
+
+.wakscord-notification .notification-info {
+  font-size: 10pt;
+  color: rgba(250,250,250,0.5);
+}
+
+.wakscord-notification:hover .notification-info {
+  color: #fafafa;
+}
+
+.wakscord-notification .logo {
+  width: 50px;
+  height: 50px;
+}
+
+.wakscord-notification.fade-out {
+  animation: wakscord-notification-fade-out 0.5s ease-in-out;
+}
+
+@keyframes wakscord-notification-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.wakscord-notification.우왁굳 {
+  background-position-x: 50% !important;
+  background-position-y: 38% !important;
+  background-size: 200% !important;
+}
+
+.wakscord-notification.아이네 {
+  background-position-x: 95% !important;
+  background-position-y: 35% !important;
+  background-size: 100% !important;
+}
+
+.wakscord-notification.징버거 {
+  background-position-x: center !important;
+  background-position-y: 35% !important;
+  background-size: 100% !important;
+}
+
+.wakscord-notification.릴파 {
+  background-position-x: 70% !important;
+  background-position-y: 30% !important;
+  background-size: 100% !important;
+}
+
+.wakscord-notification.주르르 {
+  background-position-x: center !important;
+  background-position-y: 22% !important;
+  background-size: 100% !important;
+}
+
+.wakscord-notification.고세구 {
+  background-position-x: center !important;
+  background-position-y: 22% !important;
+  background-size: 100% !important;
+}
+
+.wakscord-notification.비챤 {
+  background-position-x: 65% !important;
+  background-position-y: 30% !important;
+  background-size: 100% !important;
+}
+
+.wakscord_banner {
+  width: 100%;
+  margin-bottom: 20px;
+}
